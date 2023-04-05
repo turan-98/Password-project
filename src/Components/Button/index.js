@@ -1,6 +1,9 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import './style.css';
 
-class Button extends React.Component{
+class Btn extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -29,10 +32,10 @@ class Button extends React.Component{
             <div className='wrapper'>
                 <p>{this.state.password}</p>
                 <input type="range" id="volume" min="0" max="50"/>
-                <button onClick={this.randomPassword}>Teste</button>
+                <Button variant="primary" onClick={this.randomPassword}>Gerar senha</Button>
             </div>
         )
     }
 }
 
-export default Button;
+export default Btn;
