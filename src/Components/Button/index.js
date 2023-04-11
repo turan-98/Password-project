@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import './style.scss';
 import RangeButton from '../RangeButton';
+import CopyButton from '../CopyButton';
 
 class Btn extends React.Component{
     constructor(props){
@@ -34,7 +35,11 @@ class Btn extends React.Component{
         return (
             <div className='wrapper'>
                 <div className='d-flex-column'>
-                    <p>{this.state.password}</p>
+                    <div className='d-flex-row'>
+                        <p id="passwordValue">{this.state.password}</p>
+                        <CopyButton />
+                    </div>
+                    
                     <RangeButton />
                     <Button variant="primary" onClick={this.randomPassword}>Gerar senha</Button>
                 </div>

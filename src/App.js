@@ -1,5 +1,6 @@
 import Btn from './Components/Button';
 import Menu from './Components/Menu'
+import './style.scss';
 
 function App() {
   return (

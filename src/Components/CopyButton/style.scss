@@ -1,0 +1,17 @@
+.copybutton{
+    width: 45px;
+    height: 45px;
+    border:none;
+    border-radius:100%;
+    transition: all 200ms;
+    background: none;
+    svg{
+        fill:green;
+    }
+    &:hover{
+        svg{
+            fill:white;
+        }
+    }
+    
+}
