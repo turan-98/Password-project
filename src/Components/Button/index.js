@@ -12,9 +12,6 @@ class Btn extends React.Component{
             password:'',
         };
     }
-
-    
-
     randomPassword = () => {
         var characters = "ABCDf#gnoEFGHI@JKpqrstu%vwx&yzLM*NOP=QRShi+klmTUVWXTZabcde";  
         var pass = 2;
@@ -39,7 +36,6 @@ class Btn extends React.Component{
                         <p id="passwordValue">{this.state.password}</p>
                         <CopyButton />
                     </div>
-                    
                     <RangeButton />
                     <Button variant="primary" onClick={this.randomPassword}>Gerar senha</Button>
                 </div>
