@@ -1,3 +1,14 @@
+$size-button-w:150;
+$size-button-h:40;
+$default-color:#fff;
+$active-color:#f48c06;
+
+@function convert_px_to_rem($number){
+    $result: calc($number / 16);
+    @return $result;
+}
+
+
 .wrapper{
     margin: 0;
     position: absolute;
@@ -10,10 +21,20 @@
         display: flex;
         flex-flow: column;
         row-gap: 30px;
+        align-items: center;
     }
     .d-flex-row{
         display: flex;
         flex-flow: row;
         justify-content: space-between;
     }
+}
+
+.button-genarate{
+    width: convert_px_to_rem($size-button-w)em;
+    height: convert_px_to_rem($size-button-h)em;
+}
+#passwordValue{
+    color:$default-color;
+    padding: 1em;
 }

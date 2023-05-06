@@ -1,12 +1,12 @@
 .copybutton{
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border:none;
     border-radius:100%;
     transition: all 200ms;
     background: none;
     svg{
-        fill:green;
+        fill:#f48c06;
     }
     &:hover{
         svg{
@@ -14,4 +14,20 @@
         }
     }
     
+}
+.nothing-to-copy{
+    color:#fff;
+    padding: 1rem;
+}
+.hide{
+    display: none !important;
+}
+.party-popper{
+    background-image: url('./img/party-popper.png');
+    background-position: center;
+    background-size: cover;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 70%;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import './style.scss';
-import RangeButton from '../RangeButton';
+//import RangeButton from '../RangeButton';
 import CopyButton from '../CopyButton';
 
 class Btn extends React.Component{
@@ -25,7 +25,11 @@ class Btn extends React.Component{
         this.setState({
             password:randomString.toString(),
         })
+
+        
+
     }
+
     
 
     render(){
@@ -36,8 +40,7 @@ class Btn extends React.Component{
                         <p id="passwordValue">{this.state.password}</p>
                         <CopyButton />
                     </div>
-                    <RangeButton />
-                    <Button variant="primary" onClick={this.randomPassword}>Gerar senha</Button>
+                    <Button className="button-genarate" variant="primary" onClick={this.randomPassword}>Gerar senha</Button>
                 </div>
             </div>
         )
