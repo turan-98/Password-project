@@ -1,37 +1,48 @@
-import React, {useState} from "react";
 import './style.scss';
-
-
+import React, {useState} from "react";
+import partyPopper from "./img/party-popper.png"
 
 export default function CopyButton() {
-const [toggle, setToggle] = useState(true);
-// referência https://dev.to/mohsenkamrani/javascript-clipboard-api-take-control-of-your-copy-cut-and-paste-3ekd
- function handleCopy(){
-    
+
+const onClick = (event) =>{
+    handleToggle();
+    handleCopy();
+}
+
+
+const [isActive, setActive] = useState("false");
+const handleToggle = () =>{
+    setActive(!isActive);
+}
+
+ function handleCopy(props){
     var $copyText = document.querySelector('#passwordValue').innerHTML;
     if($copyText.length > 0){
         navigator.clipboard.writeText($copyText);
-        alert('texto copiado')
+        
     }else{
-       
        alert('nada a copiar')
     }
-// setToggle((prevState) => !prevState);
-//<div className="party-popper"></div>
-//<p id="nothing-to-copy" className='nothing-to-copy'>Nada a copiar</p>
-//{toggle ? null : alert('Nada para copiar')}
- }   
+ } 
 return (
         <>
-        <button className="copybutton" onClick={handleCopy}>
+        <div className={isActive ? "-none" : "active-pop"}>
+            <div className='wrapper'>
+                <p>Copiado!</p>
+                <img src={partyPopper} width={20} height={20} alt="Party Popper"/>
+            </div>
+            
+        </div>
+        <button className="copybutton" onClick={onClick}>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="" className="bi bi-clipboard" viewBox="0 0 16 16">
                 <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
                 <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
             </svg>
         </button>
         
-        
+        <p ></p>
         </>
     )
+ 
 }
 
