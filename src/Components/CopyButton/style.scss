@@ -1,37 +1,38 @@
-.copybutton{
-    width: 50px;
-    height: 50px;
-    border:none;
-    border-radius:100%;
+@import url('../../main.scss');
+%defaultFlexRow{
+	display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.button--copy{
     transition: all 200ms;
-    background: none;
-    svg{
-        fill:#f48c06;
-    }
-    &:hover{
+        background: none;
         svg{
-            fill:white;
+            fill:#f48c06;
         }
-    }
-    
+        &:hover{
+            svg{
+                fill:white;
+            }
+        }
 }
 .-none{
     display: none;
 }
 
-.active-pop{
+.active--popup{
     width: 150px;
     height: 35px;
+    left:50%;
     border-radius: 5px;
     background: rgba($color: #fff, $alpha: 0.8);
     position: absolute;
     z-index: 99;
 }
-.wrapper{
+.wrapper-copy, .defaultFlexRow{
+    @extend %defaultFlexRow;
     text-align: center;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
 }
 
 .nothing-to-copy{
@@ -47,6 +48,6 @@
     background-size: cover;
     height: 15px;
     width: 15px;
-    position: absolute;
+    position: relative;
     left: 70%;
 }

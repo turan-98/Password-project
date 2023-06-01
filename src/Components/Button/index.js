@@ -5,7 +5,7 @@ import './style.scss';
 //import RangeButton from '../RangeButton';
 import CopyButton from '../CopyButton';
 
-class Btn extends React.Component{
+class ButtonGenarate extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -16,35 +16,26 @@ class Btn extends React.Component{
         var characters = "ABCDf#gnoEFGHI@JKpqrstu%vwx&yzLM*NOP=QRShi+klmTUVWXTZabcde";  
         var pass = 2;
         var randomString = '';
-
         for(var i = 0; i < 16; i++){
             pass = Math.floor(Math.random() * characters.length);
             randomString += characters.substring(pass, pass + 1);
         }
-
         this.setState({
             password:randomString.toString(),
         })
-
-        
-
     }
-
-    
-
     render(){
         return (
             <div className='wrapper'>
-                <div className='d-flex-column'>
-                    <div className='d-flex-row'>
+                <div className='wrapper-column'>
+                    <div className='wrapper-row'>
                         <p id="passwordValue">{this.state.password}</p>
                         <CopyButton />
                     </div>
-                    <Button className="button-genarate" variant="primary" onClick={this.randomPassword}>Gerar senha</Button>
+                    <Button className="button button--genarete-password" variant="primary" onClick={this.randomPassword}>Gerar senha</Button>
                 </div>
             </div>
         )
     }
 }
-
-export default Btn;
+export default ButtonGenarate;

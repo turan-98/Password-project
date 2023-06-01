@@ -16,21 +16,20 @@ $active-color:#f48c06;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    .d-flex-column{
+    .wrapper-column{
         display: flex;
+        align-items: center;
         flex-flow: column;
         row-gap: 30px;
-        align-items: center;
     }
-    .d-flex-row{
+    .wrapper-row{
         display: flex;
         flex-flow: row;
         justify-content: space-between;
     }
 }
 
-.button-genarate{
+.button--genarete-password{
     width: convert_px_to_rem($size-button-w)em;
     height: convert_px_to_rem($size-button-h)em;
 }
