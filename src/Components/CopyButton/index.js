@@ -23,9 +23,9 @@ const handleToggle = () =>{
  } 
 return (
         <>
+
         <div className={isActive ? "-none" : "active--popup"}>
             <div className='wrapper-copy'>
-                <p>Copiado!</p>
                 <img src={partyPopper} width={20} height={20} alt="Party Popper"/>
             </div>
         </div>

@@ -6,7 +6,7 @@
 }
 
 .button--copy{
-    transition: all 200ms;
+        transition: all 200ms;
         background: none;
         svg{
             fill:#f48c06;
@@ -18,23 +18,27 @@
         }
 }
 .-none{
-    display: none;
+    display: none !important;
 }
 
 .active--popup{
-    width: 150px;
-    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
     left:50%;
-    border-radius: 5px;
-    background: rgba($color: #fff, $alpha: 0.8);
+    top:-30%;
+    border-radius: 100%;
+    background:#333;
     position: absolute;
     z-index: 99;
+    animation: popUp 1s ease-in-out;
 }
 .wrapper-copy, .defaultFlexRow{
     @extend %defaultFlexRow;
     text-align: center;
 }
-
 .nothing-to-copy{
     color:#fff;
     padding: 1rem;
@@ -50,4 +54,12 @@
     width: 15px;
     position: relative;
     left: 70%;
+}
+
+@keyframes popUp{
+    0%{opacity: 1;}
+    25%{opacity: 0.8;}
+    50%{opacity:0.6;}
+    75%{opacity: 0.3;}
+    100%{opacity: 0;}
 }
