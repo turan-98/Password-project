@@ -1,0 +1,50 @@
+
+.wrapper{
+    --size-button-w:150px;
+    --size-button-h:40px;
+    --default-color:#333;
+    --active-color:#f48c06;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.wrapper .wrapper-column{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    row-gap: 30px;
+}
+.wrapper-row{
+    width: 250px;
+    border:1px solid #c3c3c3;
+    border-radius: 50px;
+}
+
+.wrapper-row, .button--copy{
+    -webkit-box-shadow: -2px 2px 5px 0px rgba(184,182,184,1);
+    -moz-box-shadow: -2px 2px 5px 0px rgba(184,182,184,1);
+    box-shadow: -1px 1px 3px 0px rgba(184,182,184,1);
+}
+
+.wrapper .wrapper-row{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+.button--genarete-password{
+    width: 50px;
+    height: 50px;
+    background: none !important;
+    border: none !important;
+    color:rgb(13, 165, 170);
+}
+.button--genarete-password:hover{
+    color:rgb(13, 165, 170);
+}
+#passwordValue{
+    color:var(--default-color);
+    padding: 1em;
+}

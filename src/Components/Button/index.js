@@ -1,8 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-import './style.scss';
+import './style.css';
 //import RangeButton from '../RangeButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRotateLeft } from '@fortawesome/free-solid-svg-icons';
 import CopyButton from '../CopyButton';
 
 class ButtonGenarate extends React.Component{
@@ -30,9 +32,12 @@ class ButtonGenarate extends React.Component{
                 <div className='wrapper-column'>
                     <div className='wrapper-row'>
                         <p id="passwordValue">{this.state.password}</p>
-                        <CopyButton />
+                        
+                        <Button className="button button--genarete-password" variant="primary" onClick={this.randomPassword}>
+                        <FontAwesomeIcon icon={faArrowRotateLeft} />
+                        </Button>
                     </div>
-                    <Button className="button button--genarete-password" variant="primary" onClick={this.randomPassword}>Gerar senha</Button>
+                    <CopyButton />
                 </div>
             </div>
         )

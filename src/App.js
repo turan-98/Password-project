@@ -1,12 +1,20 @@
 import Btn from './Components/Button';
-import Menu from './Components/Menu'
-import './main.scss';
+import Menu from './Components/Menu';
+import React from 'react';
+import './main.css';
 
 function App() {
   return (
     <div className="App" id="App">
-      < Menu/>
-      <Btn />
+       < Menu/>
+        <div className='container-page'>
+          <>
+            <div className='wrapper-text'>
+              <h1 className='wrapper-jumbo-text'>Random Password Generator</h1>
+            </div>
+          </>
+          <Btn />
+        </div>
     </div>
   );
 }

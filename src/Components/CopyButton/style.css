@@ -1,21 +1,14 @@
-@import url('../../main.scss');
-%defaultFlexRow{
-	display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-}
+@import url("./../../main.css");
 
 .button--copy{
-        transition: all 200ms;
-        background: none;
-        svg{
-            fill:#f48c06;
-        }
-        &:hover{
-            svg{
-                fill:white;
-            }
-        }
+    transition: all 200ms;
+    border-radius: 30px;
+    font-weight: 900;
+    background-color: rgb(2, 184, 99);
+}
+.button--copy:hover{
+    background-color:rgb(15, 6, 134);
+    color:#fff;
 }
 .-none{
     display: none !important;
@@ -36,7 +29,9 @@
     animation: popUp 1s ease-in-out;
 }
 .wrapper-copy, .defaultFlexRow{
-    @extend %defaultFlexRow;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
     text-align: center;
 }
 .nothing-to-copy{
