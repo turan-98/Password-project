@@ -9,6 +9,8 @@ const onClick = (event) =>{
     handleCopy();
 }
 const [isActive, setActive] = useState("false");
+const [isCopied, setCopy] = useState("false");
+
 const handleToggle = () =>{
     setActive(!isActive);
 }
@@ -17,6 +19,7 @@ const handleToggle = () =>{
     var $copyText = document.querySelector('#passwordValue').innerHTML;
     if($copyText.length > 0){
         navigator.clipboard.writeText($copyText);
+        setCopy(!isCopied);
     }else{
        alert('nada a copiar')
     }
@@ -30,11 +33,9 @@ return (
             </div>
         </div>
         */}
-        <button className="button button--copy" onClick={onClick} alt="Botão de copiar">
-            Copy
+        <button className="button button--copy text-white" onClick={onClick} alt="Botão de copiar">
+            {isCopied ? "Copiar" : "Copiado!"}
         </button>
-        
-        <p ></p>
         </>
     )
  
