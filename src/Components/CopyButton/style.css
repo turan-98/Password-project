@@ -1,60 +1,28 @@
-@import url("./../../main.css");
+@import url("../../../public/styles/main.css");
 
 .button--copy{
     transition: all 200ms;
     border-radius: 30px;
     font-weight: 900;
     background-color: rgb(2, 184, 99);
-}
-.button--copy:hover{
-    background-color:rgb(15, 6, 134);
-    color:#fff;
-}
-.-none{
-    display: none !important;
+    &:hover{
+        background-color:rgb(15, 6, 134);
+        color:#fff;
+    }
 }
 
-.active--popup{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    left:50%;
-    top:-30%;
-    border-radius: 100%;
-    background:#333;
-    position: absolute;
-    z-index: 99;
-    animation: popUp 1s ease-in-out;
-}
 .wrapper-copy, .defaultFlexRow{
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     text-align: center;
 }
+
+.-none, .hide{
+    display: none !important;
+}
+
 .nothing-to-copy{
     color:#fff;
     padding: 1rem;
-}
-.hide{
-    display: none !important;
-}
-.party-popper{
-    background-image: url('./img/party-popper.png');
-    background-position: center;
-    background-size: cover;
-    height: 15px;
-    width: 15px;
-    position: relative;
-    left: 70%;
-}
-
-@keyframes popUp{
-    0%{opacity: 1;}
-    25%{opacity: 0.8;}
-    50%{opacity:0.6;}
-    75%{opacity: 0.3;}
-    100%{opacity: 0;}
 }

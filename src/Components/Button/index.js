@@ -30,8 +30,8 @@ class ButtonGenarate extends React.Component{
         return (
             <div className='wrapper'>
                 <div className='wrapper-column'>
-                    <div className='wrapper-row'>
-                        <p id="passwordValue">{this.state.password}</p>
+                    <div className='wrapper-text-generated'>
+                        <p className='text-left w-75 mt-3' id="passwordValue">{this.state.password}</p>
                         
                         <Button className="button button--genarete-password" variant="primary" onClick={this.randomPassword}>
                         <FontAwesomeIcon icon={faArrowRotateLeft} />

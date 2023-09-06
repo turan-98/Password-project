@@ -1,6 +1,6 @@
 import './style.css';
 import React, {useState} from "react";
-import partyPopper from "./img/party-popper.png"
+
 
 export default function CopyButton() {
 
