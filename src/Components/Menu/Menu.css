@@ -1,0 +1,20 @@
+@import url('../../../public/styles/main.css');
+.navbar{
+    display: block;
+    top: 0;
+    padding: 12px;
+    border-bottom: 1px solid var(--lt-color-gray-300);
+}
+.navbar-item{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 4px;
+    li{
+        list-style: none;
+    }
+}
+li a {
+    text-decoration: none;
+    font-weight: 600;
+}

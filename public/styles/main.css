@@ -2,35 +2,43 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
-:root{
-	--base-color:#fff;
-	--font-body:'Lato', sans-serif;
-	--font-jumbo-text:1.5rem;
-	--text-colors-one:#161616;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+:root {
+  --base-color: #fff;
+  --font-body: "Lato", sans-serif;
+  --font-jumbo-text: 1.5rem;
+  --text-colors-one: #161616;
+  --lt-color-gray-100: #f8f9fc;
+  --lt-color-gray-200: #f1f3f9;
+  --lt-color-gray-300: #dee3ed;
+  --lt-color-gray-400: #c2c9d6;
+  --lt-color-gray-500: #8f96a3;
+  --lt-color-gray-600: #5e636e;
+  --lt-color-gray-700: #2f3237;
+  --lt-color-gray-800: #1d1e20;
+  --lt-color-gray-900: #111213;
 }
 body {
-	line-height: 1;
-    background: var(--base-color);
-	font-family: var(--font-body);
+  line-height: 1;
+  background: var(--base-color);
+  font-family: var(--font-body);
 }
-button{
-    width: 150px;
-    height: 50px;
-    border:none;
-    border-radius:100%;
+button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 100%;
 }
-.container-page{
-    width: 100%;
-    height: 50rem;
+.container-page {
+  width: 100%;
+  height: 50rem;
 }
-.wrapper-svg{
-	display: block;
-	width: 200px;
+.wrapper-svg {
+  display: block;
+  width: 200px;
 }
-.wrapper-svg img{
-	width: 150px;
+.wrapper-svg img {
+  width: 150px;
 }
-
 
 /* END RESET CSS */
